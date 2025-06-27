@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: app-nginx-test
     spec:
       containers:
-      - image: 861276125286.dkr.ecr.ap-northeast-1.amazonaws.com/argocd/test:v4
+      - image: 861276125286.dkr.ecr.ap-northeast-1.amazonaws.com/argocd/test:v5
         imagePullPolicy: Always
         name: app-nginx-test
         ports:
