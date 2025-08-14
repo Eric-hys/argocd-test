@@ -35,7 +35,7 @@ spec:
         resources:
           requests:
             cpu: "2000m"       # 至少預留 0.5 個 vCPU
-            memory: "7Gi"   # 至少預留 512Mi 記憶體
+            memory: "6Gi"   # 至少預留 512Mi 記憶體
           limits:
             cpu: "2000m"      # 最多使用 1 個 vCPU
             memory: "7000Mi"     # 最多使用 1Gi 記憶體
