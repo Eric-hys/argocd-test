@@ -38,7 +38,7 @@ spec:
             memory: "6Gi"   # 至少預留 512Mi 記憶體
           limits:
             cpu: "2000m"      # 最多使用 1 個 vCPU
-            memory: "7000Mi"     # 最多使用 1Gi 記憶體
+            memory: "6000Mi"     # 最多使用 1Gi 記憶體
         volumeMounts:
         - name: w3clog-volume
           mountPath: /data/w3clog
