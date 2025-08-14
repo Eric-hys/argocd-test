@@ -13,7 +13,7 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: yc-fps
-  replicas: 1
+  replicas: 5
   template:
     metadata:
       labels:
