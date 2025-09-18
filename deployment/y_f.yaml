@@ -46,6 +46,15 @@ spec:
       - name: w3clog-volume
         hostPath:
           path: /var/log/containers/yc_fps/w3clog
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: workload
+                operator: In
+                values:
+                  - yc
 ---
 apiVersion: v1
 kind: Service
