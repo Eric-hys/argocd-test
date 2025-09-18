@@ -13,7 +13,7 @@ spec:
     - type: Pods
       pods:
         metric:
-          name: http_requests_per_second
+          name: memory
         target:
-          type: AverageValue
-          averageValue: "50"
+          type: Utilization
+          averageValue: 50
