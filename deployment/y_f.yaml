@@ -38,7 +38,7 @@ spec:
             memory: "1000Mi"   # 至少預留 512Mi 記憶體
           limits:
             cpu: "350m"      # 最多使用 1 個 vCPU
-            memory: "1000Mi"     # 最多使用 1Gi 記憶體
+            memory: "1500Mi"     # 最多使用 1Gi 記憶體
         volumeMounts:
         - name: w3clog-volume
           mountPath: /data/w3clog
