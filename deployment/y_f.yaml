@@ -55,6 +55,11 @@ spec:
                 operator: In
                 values:
                   - yc
+
+      template:
+        metadata:
+          labels:
+            workload: yc
 ---
 apiVersion: v1
 kind: Service
