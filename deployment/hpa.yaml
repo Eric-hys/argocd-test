@@ -11,9 +11,8 @@ spec:
   maxReplicas: 12
   metrics:
     - type: Resource
-      pods:
-        metric:
-          name: memory
+      resource:
+        name: memory
         target:
           type: Utilization
           averageValue: 50
