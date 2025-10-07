@@ -16,3 +16,25 @@ spec:
         target:
           type: Utilization
           averageUtilization: 50
+
+  behavior:
+    scaleUp:
+      # scale up 時的控制（避免瞬間爆量）
+      stabilizationWindowSeconds: 60        # 觀察60秒再決定是否擴容
+      policies:
+        - type: Percent
+          value: 100                         # 最多一次擴容 100%（例如4→8個）
+          periodSeconds: 60                  # 每60秒檢查一次
+        - type: Pods
+          value: 4                           # 或一次最多新增4個pod
+          periodSeconds: 60
+    scaleDown:
+      # scale down 時的控制（避免太快縮回去）
+      stabilizationWindowSeconds: 300        # 至少穩定5分鐘再縮容
+      policies:
+        - type: Percent
+          value: 50                          # 每次最多縮減50%
+          periodSeconds: 60
+        - type: Pods
+          value: 2                           # 或一次最多減少2個pod
+          periodSeconds: 60
