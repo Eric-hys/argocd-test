@@ -20,7 +20,7 @@ spec:
         app.kubernetes.io/name: yc-fps
     spec:
       containers:
-        - image: eahub-aws.evertrust.com.tw:80/ea/evertrust-ycfps-service:20250930.1
+      - image: eahub-aws.evertrust.com.tw:80/ea/evertrust-ycfps-service:20250930.1
         imagePullPolicy: Always
         name: yc-fps
         ports:
