@@ -21,7 +21,7 @@ spec:
         workload: yc
     spec:
       containers:
-      - image: eahub.evertrust.com.tw/ea/evertrust-ycfps-service:20250930.1
+      - image: nginx:latest
         imagePullPolicy: Always
         name: yc-fps
         ports:
