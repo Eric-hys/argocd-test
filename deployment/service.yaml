@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: yc
+  namespace: test
   name: service-yc-fps
 spec:
   ports:

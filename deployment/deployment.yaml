@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: yc
+  namespace: test
   name: deployment-yc-fps
 spec:
   selector:
@@ -41,12 +41,12 @@ spec:
       - name: w3clog-volume
         hostPath:
           path: /var/log/containers/yc_fps/w3clog
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-            - matchExpressions:
-              - key: workload
-                operator: In
-                values:
-                  - yc
+#      affinity:
+#        nodeAffinity:
+##          requiredDuringSchedulingIgnoredDuringExecution:
+#           nodeSelectorTerms:
+#            - matchExpressions:
+#              - key: workload
+#                operator: In
+#                values:
+#                  - yc
